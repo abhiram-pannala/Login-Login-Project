@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+
+.container{
+    text-align: center;
+
+}
+
+.body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(73, 9, 9, 0.8)), url(https://wallpapertops.com/walldb/original/9/2/3/555347.jpg);
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+
+.regi{
+background-color: #82E0AA;
+text-align: center;
+margin-top: 200px;
+margin-bottom: 300px;
+margin-left: 600px;
+margin-right: 600px;
+font-family:cursive;
+
+}
+
+.msg{
+
+    color: red;
+}
+
+.nana{
+  background-color: #212F3D;
+}
+
+h1{
+    color: white;
+    font-family:Georgia, serif;
+    font-weight: bolder;
+    font-style:italic;
+    text-align:left;
+
+}
+
+h2{
+
+text-align: center;
+font-size: 25px;
+font-family: candara;
+
+}
+
+.button{
+  font-family: cursive;
+}
+
+</style>
+
+</head>
+<body class="body" >
+
+    <div class="nana" >    
+        <hr></hr> 
+         <h1> NANA MOVIES </h1>
+         <hr></hr> 
+         </div>
+        
+<div class="container">
+    <form class="regi" action="" method="POST">
+        <h2> Login </h2>
+        {% csrf_token %}
+        <div class="msg" >
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+        </div>
+        <p></p>
+        <label for="username" >Username</label> <br>
+        <input type="text" name="username" placeholder="Username" > <br>
+        <br>
+        <label for="password">Password</label> <br>
+        <input type="password" name="password" placeholder="Password" > <br>
+        <p></p>
+        <input type="submit" value="Login" class="button" >
+    </form>
+</div>
+
+<footer>
+    <h3>Author: Abhiram<h3>
+    <a href="email.com">replaytoabhi2020@gmail.com</a></p>
+</footer>        
+
+
+</body>
+</html>
